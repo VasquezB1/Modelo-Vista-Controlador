@@ -22,7 +22,9 @@ public class ControladorEmpleadoAsalariado {
     }
 
     public void create(EmpleadoAsalariado objeto) {
+        int codigoAutomatico;
         lista.add(objeto);
+        
     }
 
     public EmpleadoAsalariado read(String nombre) {

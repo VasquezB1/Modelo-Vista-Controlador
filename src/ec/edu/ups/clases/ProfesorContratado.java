@@ -23,8 +23,11 @@ public final class ProfesorContratado extends Profesor implements Interface {
     private int horasContratado;
     private Date evaluaciones;
     private int cursoACargo;
+    
 ////////////////////////////////////////////////////////////////////////////////
     //Constructor
+     public ProfesorContratado() {
+    }
 
     public ProfesorContratado(Date fechaContratacion, int horasContratado, Date evaluaciones, int cursoACargo, String materia, String colegio, int codigo, String turno, String nombre, String cedula, int edad, String genero) {
         super(materia, colegio, codigo, turno, nombre, cedula, edad, genero);

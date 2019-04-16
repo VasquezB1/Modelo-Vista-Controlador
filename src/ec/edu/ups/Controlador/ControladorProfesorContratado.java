@@ -5,39 +5,37 @@
  */
 package ec.edu.ups.Controlador;
 
-import ec.edu.ups.clases.Taxista;
+import ec.edu.ups.clases.ProfesorContratado;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
  *
  * @author Byron PC
  */
-public class ControladorTaxista {
+public class ControladorProfesorContratado {
+      private List<ProfesorContratado> lista;
 
-    private List<Taxista> lista;
-
-    public ControladorTaxista() {
+    public ControladorProfesorContratado() {
         lista = new ArrayList<>();
     }
 
-    public void create(Taxista objeto) {
+    public void create(ProfesorContratado objeto) {
         lista.add(objeto);
     }
 
-    public Taxista read(String nombre) {
-        for (Taxista taxista : lista) {
-            if (taxista.getNombre().equals(nombre)) {
-                return taxista;
+    public ProfesorContratado read(String nombre) {
+        for (ProfesorContratado profesorcontratado : lista) {
+            if (profesorcontratado.getNombre().equals(nombre)) {
+                return profesorcontratado;
             }
         }
         return null;
     }
 
-    public void update(Taxista objeto) {
+    public void update(ProfesorContratado objeto) {
         for (int i = 0; i < lista.size(); i++) {
-            Taxista elemento = lista.get(i);
+            ProfesorContratado elemento = lista.get(i);
             if (elemento.getNombre().equals(objeto.getNombre())) {
                 lista.set(i, objeto);
                 break;
@@ -47,8 +45,8 @@ public class ControladorTaxista {
 
     public void delete(String nombre) {
         for (int i = 0; i < lista.size(); i++) {
-            Taxista dato = lista.get(i);
-            if ((dato.getNombre().equals(nombre))) {
+            ProfesorContratado dato = lista.get(i);
+            if (dato.getNombre().equals(nombre)) {
                 lista.remove(i);
                 break;
             }
