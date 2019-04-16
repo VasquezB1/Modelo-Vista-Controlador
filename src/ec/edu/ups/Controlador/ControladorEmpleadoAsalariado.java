@@ -14,6 +14,7 @@ import java.util.List;
  * @author Byron PC
  */
 public class ControladorEmpleadoAsalariado {
+
      private List<EmpleadoAsalariado> lista;
 
     public ControladorEmpleadoAsalariado() {
@@ -24,10 +25,10 @@ public class ControladorEmpleadoAsalariado {
         lista.add(objeto);
     }
 
-    public EmpleadoAsalariado read(int codigo) {
-        for (EmpleadoAsalariado empleadoas : lista) {
-            if (empleadoas.getCodigo() == codigo) {
-                return empleadoas;
+    public EmpleadoAsalariado read(String nombre) {
+        for (EmpleadoAsalariado empleadoasalariado : lista) {
+            if (empleadoasalariado.getNombre().equals(nombre)) {
+                return empleadoasalariado;
             }
         }
         return null;
@@ -36,17 +37,17 @@ public class ControladorEmpleadoAsalariado {
     public void update(EmpleadoAsalariado objeto) {
         for (int i = 0; i < lista.size(); i++) {
             EmpleadoAsalariado elemento = lista.get(i);
-            if (elemento.getCodigo() == objeto.getCodigo()) {
+            if (elemento.getNombre().equals(objeto.getNombre())) {
                 lista.set(i, objeto);
                 break;
             }
         }
     }
 
-    public void delete(int codigo) {
+    public void delete(String nombre) {
         for (int i = 0; i < lista.size(); i++) {
             EmpleadoAsalariado dato = lista.get(i);
-            if (dato.getCodigo() == codigo) {
+            if (dato.getNombre().equals(nombre)) {
                 lista.remove(i);
                 break;
             }
