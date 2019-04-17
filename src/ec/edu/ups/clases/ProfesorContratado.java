@@ -29,13 +29,15 @@ public final class ProfesorContratado extends Profesor implements Interface {
      public ProfesorContratado() {
     }
 
-    public ProfesorContratado(Date fechaContratacion, int horasContratado, Date evaluaciones, int cursoACargo, String materia, String colegio, int codigo, String turno, String nombre, String cedula, int edad, String genero) {
-        super(materia, colegio, codigo, turno, nombre, cedula, edad, genero);
+    public ProfesorContratado(Date fechaContratacion, int horasContratado, Date evaluaciones, int cursoACargo, String materia, String colegio, String turno) {
+        super(materia, colegio, turno);
         this.fechaContratacion = fechaContratacion;
         this.horasContratado = horasContratado;
         this.evaluaciones = evaluaciones;
         this.cursoACargo = cursoACargo;
     }
+
+    
 
  
 ////////////////////////////////////////////////////////////////////////////////
@@ -108,10 +110,10 @@ public final class ProfesorContratado extends Profesor implements Interface {
 
     @Override
     public String toString() {
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        SimpleDateFormat formato2 = new SimpleDateFormat("dd/MM/yyyy");
-        return super.toString()+ "\nProfesor Contratado:\n{" + "fechaContratacion=" + formato.format(fechaContratacion.getTime()) + ", horasContratado=" + horasContratado + ", evaluaciones=" + formato2.format(evaluaciones.getTime()) + ", cursoACargo=" + cursoACargo + '}';
-    }    
+        return "ProfesorContratado{" + "fechaContratacion=" + fechaContratacion + ", horasContratado=" + horasContratado + ", evaluaciones=" + evaluaciones + ", cursoACargo=" + cursoACargo + '}';
+    }
+
+     
 
     @Override
     public String responderMensajes() {

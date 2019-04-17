@@ -13,6 +13,8 @@ import ec.edu.ups.clases.ProfesorContratado;
 import ec.edu.ups.clases.ProfesorSustituto;
 import ec.edu.ups.clases.Taxista;
 import ec.edu.ups.clases.Profesor;
+import java.util.HashSet;
+import java.util.Set;
 
 /*
  * @author Byron PC
@@ -28,10 +30,59 @@ public class Prueba {
      * Aqui se pretende demostrará el funcionamiento del programa
      */
     public static void main(String[] args) {
+               
+        ProfesorContratado carlos=new ProfesorContratado();
+        carlos.setCodigo(20);
+        carlos.setNombre("Carlos");
+        
+        ProfesorContratado juan =new ProfesorContratado();
+        juan.setCodigo(20);
+        juan.setNombre("Juan");
+        
+        
+        
+        if(carlos.equals(juan)){
+            System.out.println("Son iguales :)");
+            
+        }else{
+            System.out.println("No son iguales :(");
+        }
+        
+        ProfesorSustituto salon=new ProfesorSustituto();
+        salon.setCodigo(20);
+        ProfesorSustituto los= new ProfesorSustituto();
+        los.setCodigo(10);
+        
+        if(salon.equals(los)){
+            System.out.println("Son iguales :)");
+        }
+        else{
+            System.out.println("No son iguales :(");
+        }
+        
+        //Prueba de Set
+        
+        Set<ProfesorContratado> lista = new HashSet<>();
+        lista.add(carlos);
+        lista.add(juan);
+        for (ProfesorContratado profesorContratado : lista) {
+            System.out.println("Profesor Contratado " + profesorContratado.getNombre());
+            
+        }
+        if(lista.contains(juan)){
+            System.out.println("En la lista si existe");
+        }else        {
+            System.out.println("No existe en la lista");
+        }
+        
+               
+        
+        
+        
         // TODO code application logic here
 //////////////////////////////////////////////////////////////////////////////
     //Creacion de fechas con el metodo GregorainCalendar.
-        GregorianCalendar fechacontratacion = new GregorianCalendar(1997, 3, 16);
+       /*GregorianCalendar fechacontratacion = new GregorianCalendar(1997, 3, 16);
         GregorianCalendar vacaciones = new GregorianCalendar(2002, 3, 16);   
         GregorianCalendar contratotaxi = new GregorianCalendar(2005, 0, 18);
         GregorianCalendar vacataxi = new GregorianCalendar(2005, 3, 12);
@@ -40,7 +91,7 @@ public class Prueba {
         
     //Clase EmpleadoAsalariado con sus respectivas herencias y demás.
     
-        EmpleadoAsalariado antony = new EmpleadoAsalariado(9, 2856, 420.60, "Empresa XYZ", 460.30, fechacontratacion.getTime(), vacaciones.getTime(), "Antony Pim", "0102659875", 23, "Masculino");
+       /* EmpleadoAsalariado antony = new EmpleadoAsalariado(9, 2856, 420.60, "Empresa XYZ", 460.30, fechacontratacion.getTime(), vacaciones.getTime(), "Antony Pim", "0102659875", 23, "Masculino");
         System.out.println(antony);
         System.out.println("\nMetodos Abstractos:");
         System.out.println("\t" + antony.comer());
@@ -141,6 +192,9 @@ public class Prueba {
         };
         System.out.println("\n");
         System.out.println(empleadoAsalariadoAnonimo);
-        System.out.println(empleadoAsalariadoAnonimo.verTelevision());
-    }
+        System.out.println(empleadoAsalariadoAnonimo.verTelevision());*/
 }
+}
+
+
+

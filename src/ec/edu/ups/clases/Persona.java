@@ -3,6 +3,8 @@
  */
 package ec.edu.ups.clases;
 
+import java.util.Objects;
+
 /**
  *
  * @author Byron PC
@@ -17,6 +19,7 @@ public class Persona {
     private String cedula;
     private int edad;
     private String genero;
+    private int codigo;
 
     public Persona() {
 
@@ -29,10 +32,8 @@ public class Persona {
         this.cedula = cedula;
         this.edad = edad;
         this.genero = genero;
+        this.codigo = codigo;
     }
-
-////////////////////////////////////////////////////////////////////////////////
-    //Get and Set    
     public String getNombre() {
         return nombre;
     }
@@ -64,6 +65,17 @@ public class Persona {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+////////////////////////////////////////////////////////////////////////////////
+    //Get and Set    
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
 /////////////////////////////////////////////////////////////////////////////////
     //Interface
     public String comer() {
@@ -80,9 +92,41 @@ public class Persona {
 
 /////////////////////////////////////////////////////////////////////////////////
     //To String
+
     @Override
     public String toString() {
-        
-        return "Persona:\n{" + "nombre=" + nombre + ", cedula=" + cedula + ", edad=" + edad + ", genero=" + genero + '}';
+        return "Persona{" + "nombre=" + nombre + ", cedula=" + cedula + ", edad=" + edad + ", genero=" + genero + ", codigo=" + codigo + '}';
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash=37*hash+this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        if (this.codigo != other.codigo) {
+            return false;
+        }
+        return true;
+    }
+    
+
+    
+    
+    
+    
+    
 }

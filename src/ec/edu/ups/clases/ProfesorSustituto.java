@@ -25,13 +25,15 @@ public final class ProfesorSustituto extends Profesor implements Interface {
     public ProfesorSustituto(){
         
     }
-    public ProfesorSustituto(int horasSustituto, String experiencia, int cursoSustituto, double sueldo, String materia, String colegio, int codigo, String turno, String nombre, String cedula, int edad, String genero) { 
-        super(materia, colegio, codigo, turno, nombre, cedula, edad, genero);
+
+    public ProfesorSustituto(int horasSustituto, String experiencia, int cursoSustituto, double sueldo, String materia, String colegio, String turno) {
+        super(materia, colegio, turno);
         this.horasSustituto = horasSustituto;
         this.experiencia = experiencia;
         this.cursoSustituto = cursoSustituto;
         this.sueldo = sueldo;
     }
+    
 
 ////////////////////////////////////////////////////////////////////////////////
     //Get and Set

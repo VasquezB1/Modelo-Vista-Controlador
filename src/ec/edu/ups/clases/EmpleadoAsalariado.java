@@ -24,9 +24,12 @@ public final class EmpleadoAsalariado extends Empleados implements Interface {
     private int codigo;
     private double salario;
     private String telefono;
-
-
+///////////////////////////////////
+  
+///////////////////////////////////////////
+   
     public EmpleadoAsalariado() {
+      
     }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -112,4 +115,5 @@ public final class EmpleadoAsalariado extends Empleados implements Interface {
     public String toString() {
         return super.toString() + "\nEmpleadoAsalariado:\n{" + "horasTrabajo=" + horasTrabajo + ", codigo=" + codigo + ", salario=" + salario + '}';
     }    
+    
 }

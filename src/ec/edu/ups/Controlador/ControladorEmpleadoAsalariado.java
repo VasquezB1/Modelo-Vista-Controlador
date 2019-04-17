@@ -14,7 +14,8 @@ import java.util.List;
  * @author Byron PC
  */
 public class ControladorEmpleadoAsalariado {
-
+    
+   
      private List<EmpleadoAsalariado> lista;
 
     public ControladorEmpleadoAsalariado() {
@@ -22,7 +23,7 @@ public class ControladorEmpleadoAsalariado {
     }
 
     public void create(EmpleadoAsalariado objeto) {
-        int codigoAutomatico;
+        
         lista.add(objeto);
         
     }
@@ -55,4 +56,7 @@ public class ControladorEmpleadoAsalariado {
             }
         }
     }
+    
+ 
+    
 }
